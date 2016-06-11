@@ -23,7 +23,6 @@
 
 #=begin
   #Exercise 2 - sorting an array without using sort.
-  #Struggling with this one, will come back to it.
 
     puts
     puts "Please give me some words to sort, pressing enter after every word."
@@ -41,32 +40,38 @@
       end
     end
 
-#=begin
-    while array.length > 0 and array.length < 3
-      if array.length == 1
-        sorted_array.push(array.pop)
+    while array.length > 0
+      var1 = array.pop
+      if sorted_array.length > 0
+        var2 = sorted_array.pop
+      else
+        var2 = array.pop
       end
-      if array.length == 2
-        if array[0] < array[1]
-          holding_array.push(array.pop)
-          sorted_array.push(array.pop)
-          sorted_array.push(holding_array.pop)
+
+      while var1 < var2
+        if sorted_array.length > 0
+          holding_array.push(var2)
+          var2 = sorted_array.pop
         else
-          sorted_array.push(array.pop)
-          sorted_array.push(array.pop)
+          sorted_array.push(var1)
+          var1 = 0
+          sorted_array.push(var2)
+          var2 = 0
         end
       end
-      puts sorted_array
+
+      if var1 !=0 and var2 !=0
+        sorted_array.push(var2)
+        sorted_array.push(var1)
+      end
+
+      holding_array.length.times do
+        sorted_array.push(holding_array.pop)
+      end
+
     end
 
-
-
-
-
-#=end
-    puts "Here are your words, sorted alphabeically:"
-    puts array
-
+  puts sorted_array
 
 #=end
 

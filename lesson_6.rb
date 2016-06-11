@@ -52,7 +52,7 @@ puts
 
 =end
 
-#=begin
+=begin
 
   #Exercise 2b - Deaf Grandma Extended
 
@@ -78,6 +78,34 @@ puts
   end
 
   puts "BYE THEN!"
+  puts
+
+=end
+
+#=begin
+  #Exercise 3 - Leap Years
+
+  puts "This program will return all leap years between given start and end years."
+  puts "Please enter a start year:"
+  start_year = gets.chomp.to_i
+  puts "Please end an end year:"
+  end_year = gets.chomp.to_i
+  puts "Here are the leap years between #{start_year} and #{end_year}:"
+  puts
+  check_year = start_year
+
+  while check_year <= end_year
+    if check_year % 4 == 0
+      if check_year % 100 == 0
+        if check_year % 400 == 0
+          puts check_year.to_s
+        end
+      else
+        puts check_year.to_s
+      end
+    end
+    check_year = check_year + 1
+  end
   puts
 
 #=end

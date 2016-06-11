@@ -1,4 +1,4 @@
-#=begin
+=begin
   #Exercise 1 - bottles of beer on the wall
 
 count = 99
@@ -26,6 +26,26 @@ puts
       puts "Go to the store and buy some more, 99 bottles of beer on the wall!"
       count -=1
       puts
+    end
+  end
+
+=end
+
+#=begin
+  #Exercise 2 - Deaf Grandma
+
+  puts
+  puts "Ask your deaf grandma a question!"
+  question = ''
+
+  while question != 'BYE'
+    question = gets.chomp
+    if question == 'BYE'
+      puts
+    elsif question == question.upcase
+      puts "No, not since ".upcase + rand(1930..1950).to_s
+    else
+      puts "Huh?! Speak up, sonny!".upcase
     end
   end
 

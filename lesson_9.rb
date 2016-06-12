@@ -25,6 +25,52 @@
     puts "BUMP"
   end
 
+=end
 
+=begin
+  #Exercise 3 - Pick a number to show on the dice
+
+  class Die
+    def initialize
+        roll
+    end
+
+    def roll
+      @number_showing = rand(1..6)
+    end
+
+    def showing
+      @number_showing
+    end
+
+    def set
+      puts "please enter a number between 1 and 6"
+      @side = gets.chomp
+      if @side != ""
+        if @side.to_i > 6 or @side.to_i < 1
+          puts "Error! Number must be between 1 and 6"
+        else
+          @number_showing = @side
+        end
+      else
+        @number_showing
+      end
+    end
+  end
+
+  dice1 = Die.new
+  puts dice1.showing
+  puts dice1.roll
+  puts dice1.showing
+  dice1.set
+  puts dice1.showing
+  puts dice1.roll
 
 =end
+
+#= begin
+  #Baby Dragon Practice
+
+  
+
+#=end

@@ -31,7 +31,7 @@ puts
 
 =end
 
-#=begin
+=begin
 
   #Exercise 2 - Deaf Grandma
 
@@ -50,7 +50,7 @@ puts
     end
   end
 
-#=end
+=end
 
 =begin
 
@@ -59,7 +59,7 @@ puts
   loop_counter = 0
 
   puts
-  puts "Ask your deaf grandma a question:"
+  puts "What have you got to say to your old nan?".upcase
 
   while loop_counter < 3
     question = gets.chomp
@@ -77,7 +77,7 @@ puts
     end
   end
 
-  puts "BYE THEN!"
+  puts "SEE YOU SOON!"
   puts
 
 =end

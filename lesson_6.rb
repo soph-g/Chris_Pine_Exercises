@@ -5,7 +5,7 @@ count = 99
 
 puts "Introducing that old favourite, \"99 Bottles!\""
 puts
-  while count > -1
+  while count >= 0
     if count > 2
       puts "#{count} bottles of beer on the wall, #{count} bottles of beer."
       count -= 1
@@ -31,18 +31,18 @@ puts
 
 =end
 
-=begin
+#=begin
 
   #Exercise 2 - Deaf Grandma
 
   puts
-  puts "Ask your deaf grandma a question!"
-  question = ''
+  puts "What have you got to say to your old nan?".upcase
 
-  while question != 'BYE'
+  while true
     question = gets.chomp
     if question == 'BYE'
-      puts
+      puts 'See you soon!'.upcase
+      break
     elsif question == question.upcase
       puts "No, not since ".upcase + rand(1930..1950).to_s
     else
@@ -50,7 +50,7 @@ puts
     end
   end
 
-=end
+#=end
 
 =begin
 
@@ -82,7 +82,7 @@ puts
 
 =end
 
-#=begin
+=begin
   #Exercise 3 - Leap Years
 
   puts "This program will return all leap years between given start and end years."
@@ -108,4 +108,4 @@ puts
   end
   puts
 
-#=end
+=end
